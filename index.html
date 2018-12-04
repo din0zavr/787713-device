@@ -10,22 +10,27 @@
               <img src="img/logo.svg" widtn="164" height="35" alt="Логотип">
           </a>
           <section class="user-interfase">
-              <img src="img/search.svg" width="16" height="16" alt="search-icon">
-              <span>поиск по сайту</span>
               <h2 class="visually-hidden">Интерфейс пользователя</h2>
-<!--              здесь будет форма-->
+              <form action="#" method="get">
+                  <input type="text" id="search" name="search" placeholder="Поиск по сайту">
+                  <button type="submit" class="search-button">Поиск</button>
+              </form>
               <ul class="user-login">
                   <li class="user-icon"><a href="#">
                       <img src="img/user.svg" width="13" height="12" alt="user-icon">
                       </a></li>
                   <li class="user-name visually-hidden"><a href="#">Валентин Петухов</a></li>
-                  <li class="login-link">Вход</li>
-                  <li class="login-exit visually-hidden">Выход</li>
+                  <li class="login-link"><a class="button-small" href="#">Вход</a></li>
+                  <li class="login-exit visually-hidden"><button class="button-small">Выход</button></li>
               </ul>
-              <img src="img/compare.svg" width="10" height="10" alt="compare-icon">
-              <p class="compare">Сравнить</p>
-              <img src="img/cart.svg" width="12" height="12" alt="bascet-icon">
-              <p class="basket">Корзина</p>
+              <a href="#">
+                <img src="img/compare.svg" width="10" height="10" alt="compare-icon">
+                <p class="button-small">Сравнить</p>
+              </a>
+              <a href="#">
+                <img src="img/cart.svg" width="12" height="12" alt="bascet-icon">
+                <p class="button-small">Корзина</p>
+              </a>
           </section>
           <nav class="main-navigation">
               <ul class="site-navigation">
@@ -202,8 +207,8 @@
           <section class="contacts">
               <h2>Контакты</h2>
               <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-              <a href="#"><img src="img/map.jpg" width="560" height="222" alt="карта"></a>
-              <a class="button">Напишите нам</a>
+              <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш адрес г. Москва, ул. Строителей, 15"></a>
+              <button class="button">Напишите нам</button>
           </section>
       </main>
       
@@ -219,13 +224,17 @@
                       <img src="img/user.svg" width="13" height="12" alt="user-icon">
                   </a></li>
                   <li class="footer-user-name visually-hidden"><a href="#">Валентин Петухов</a></li>
-                  <li class="footer-login-link">Вход</li>
-                  <li class="footer-login-exit visually-hidden">Выход</li>
+                  <li class="footer-login-link"><a href="#" class="button-small">Вход</a></li>
+                  <li class="footer-login-exit visually-hidden"><button class="button-small">Выход</button></li>
               </ul>
-              <img src="img/compare.svg" width="10" height="10" alt="compare-icon">
-              <p class="footer-compare">Сравнить</p>
-              <img src="img/cart.svg" width="12" height="12" alt="bascet-icon">
-              <p class="footer-basket">Корзина</p>
+              <a href="#">
+                <img src="img/compare.svg" width="10" height="10" alt="compare-icon">
+                  <p class="button-small">Сравнить</p>
+              </a>
+              <a href="#">
+                <img src="img/cart.svg" width="12" height="12" alt="bascet-icon">
+                <p class="button-small">Корзина</p>
+              </a>
           </section>
           <p class="adress">г. Москва, ул. Строителей, 15</p>
           <ul class="footer-nav">
@@ -255,14 +264,22 @@
       
       <section class="modal write-us">
           <h2 class="visually-hidden">Напишите нам</h2>
-<!--          здесь будет форма-->
-          <span class="button send">Отправить</span>
-          <span class="modal-close"></span>
+          <form action="#" method="post">
+              <label for="user-name">Ваше имя:</label>
+              <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
+              <label for="user-e-mail">Ваш e-mail:</label>
+              <input type="text" id="user-e-mail" name="user-e-mail" placeholder="email@example.com">
+              <label for="user-message">Текст письма:</label>
+              <textarea id="user-message" name="user-message" placeholder="В свободной форме"></textarea>
+              <button class="button" type="submit">Отправить</button>
+          </form>
+          <button class="modal-close">Закрыть</button>
       </section>
       
       <section class="modal modal-map">
           <h2 class="visually-hidden">Как добраться</h2>
-          <a href="#"><img src="#" alt="Крупная карта"></a>
+          <a href="#"><img src="img/map-big.jpg" alt="Наш адрес г. Москва, ул. Строителей, 15"></a>
+          <button class="modal-close">Закрыть</button>
       </section>
   </body>
 </html>
