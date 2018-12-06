@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="inner-page">
       <header>
-          <a href="index.html" class="main-header-logo">
-               <img src="img/logo.svg" widtn="164" height="35" alt="Логотип">
+          <div class="index-column">
+          <a href="#" class="main-header-logo">
+              <img src="img/logo.svg" widtn="164" height="35" alt="Логотип">
           </a>
-          <section class="user-interfase">
+          <section class="user-interface">
               <h2 class="visually-hidden">Интерфейс пользователя</h2>
               <form action="#" method="get">
                   <input type="text" id="search" name="search" placeholder="Поиск по сайту">
@@ -37,6 +40,11 @@
                   <li><a href="catalog.html">Каталог</a></li>
                   <li class="show-popular-icon">
                       <img src="img/plus.png" width="16" height="16">
+                  </li>
+                  <li><a href="#">Доставка</a></li>
+                  <li><a href="#">Гарантия</a></li>
+                  <li><a href="#">Контакты</a></li>
+              </ul>
                       <ul class="popular-list visually-hidden">
                           <li class="popular-item first-column"><a href="#">Виртуальная реальность</a></li>
                           <li class="popular-item first-column"><a href="#">Моноподы для селфи</a></li>
@@ -45,12 +53,8 @@
                           <li class="popular-item second-column"><a href="#">Умные часы</a></li>
                           <li class="popular-item third-column"><a href="#">Квадрокоптеры</a></li>
                       </ul>
-                  </li>
-                  <li><a href="#">Доставка</a></li>
-                  <li><a href="#">Гарантия</a></li>
-                  <li><a href="#">Контакты</a></li>
-              </ul>
           </nav>
+          </div>
       </header>
       
       <main class="container">
@@ -113,21 +117,21 @@
           
           <section>
               <h2>Сортировка:</h2>
-              <ul>
-                  <li><button>по цене</button></li>
-                  <li><button>по типу</button></li>
-                  <li><button>по популярности</button></li>
+              <ul class="sort-to">
+                  <li><a href="#">по цене</a></li>
+                  <li><a href="#">по типу</a></li>
+                  <li><a href="#">по популярности</a></li>
               </ul>
-              <ul>
-                  <li><button>вверх</button></li>
-                  <li><button>вниз</button></li>
+              <ul class="sort-way">
+                  <li><a href="#">вверх</a></li>
+                  <li><a href="#">вниз</a></li>
               </ul>
           </section>
           <section>
               <h2 class="visually-hidden">Список моноподов для селфи</h2>
               <ul class="catalog-list">
                   <li catalog-item>
-                      <h3 class="product-name"><a href="#">Любительская палка-селфи</a></h3>
+                      <a href="#"><h3 class="product-name">Любительская ceлфи-палка</h3></a>
                       <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                       <span class="visually-hidden button button-add-to-basket">Добавить в корзину</span>
                       <span class="visually-hidden button-add-to-compare">Добавить к сравнению</span>
@@ -135,7 +139,7 @@
                       <p class="label-new visually-hidden">New</p>
                   </li>
                   <li catalog-item>
-                      <h3 class="product-name"><a href="#">Профессиональная селфи-палка</a></h3>
+                      <a href="#"><h3 class="product-name">Профессиональная селфи-палка</h3></a>
                       <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                       <span class="visually-hidden button button-add-to-basket">Добавить в корзину</span>
                       <span class="visually-hidden button-add-to-compare">Добавить к сравнению</span>
@@ -143,7 +147,7 @@
                       <p class="label-new visually-hidden">New</p>
                   </li>
                   <li catalog-item>
-                      <h3 class="product-name"><a href="#">Непотопляемая селфи-палка</a></h3>
+                      <a href="#"><h3 class="product-name">Непотопляемая селфи-палка</h3></a>
                       <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                       <span class="visually-hidden button button-add-to-basket">Добавить в корзину</span>
                       <span class="visually-hidden button-add-to-compare">Добавить к сравнению</span>
@@ -151,7 +155,7 @@
                       <p class="label-new visually-hidden">New</p>
                   </li>
                    <li catalog-item>
-                      <h3 class="product-name"><a href="#">Селфи-палка «Следуй за мной»</a></h3>
+                      <a href="#"><h3 class="product-name">Селфи-палка «Следуй за мной»</h3></a>
                       <img src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»">
                       <span class="visually-hidden button button-add-to-basket">Добавить в корзину</span>
                       <span class="visually-hidden button-add-to-compare">Добавить к сравнению</span>
@@ -171,10 +175,10 @@
       
       <footer>
           <div class="container">
-           <a class="footer-logo" href="index.html">
-                <img src="img/logo.svg" widtn="164" height="35" alt="Логотип">
+           <a href="#" class="footer-logo">
+                <img src="img/logo-footer.svg" widtn="163" height="35" alt="Логотип">
               </a>
-           <section class="footer-user-interfase">
+          <section class="user-interface">
               <h2 class="visually-hidden">Интерфейс пользователя</h2>
               <ul class="footer-user-login">
                   <li class="footer-user-icon"><a href="#">
