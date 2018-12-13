@@ -1,13 +1,13 @@
 @font-face {
     font-family: "Open Sans";
-    src: url("fonts/opensans.woff") format("woff"),
-         url("fonts/opensans.woff2") format("woff2");
+    src: url("opensans.woff") format("woff"),
+         url("opensans.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Open Sans Light";
-    src: url("fonts/opensanslight.woff") format("woff"),
-         url("fonts/opensanslight.woff2") format("woff2");
+    src: url("opensanslight.woff") format("woff"),
+         url("opensanslight.woff2") format("woff2");
 }
 
 @font-face {
@@ -29,7 +29,7 @@ body {
     font-family: "Open Sans Light", "Arial", sans-serif;
     font-size: 15px;
     line-height: 30px;
-    color: #464646;
+    color: #000000;
     
     background-color: #ffffff;
     background-position: top center;
@@ -40,15 +40,23 @@ a {
 }
 
 .index-column {
-    color: #000000;
-    
     background-color: #f7e296;
 }
 
-.user-interface input[type="text"] {
+/*
+header a:focus,
+header a:hover {
+    opacity: 0.6;
+}
+*/
+
+.user-interface input[type="search"] {
     font: inherit;
 } 
 
+/*.user-interface input[type="search"]:link {*/
+    
+}
 .user-interface ul {
     list-style: none;
 }
@@ -90,14 +98,21 @@ a {
     line-height: 180px;
     color: #ffffff;
     background: #a6ffa6;
+/*    фон для индикации*/
 }
+
 .slide-description b {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 47px;
     line-height: 56px;
-    color: #000000;
 }
 
+.product-slider p,
+.service-slider p,
+.about p,
+.contacts p {
+    color: #464646;
+}
 .button {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
@@ -118,6 +133,7 @@ table tr:nth-of-type(1) {
 table tr:nth-of-type(2) {
     font-size: 13px;
     line-height: 20px;
+    color: #464646;
 }
 
 .category-list {
@@ -144,7 +160,6 @@ table tr:nth-of-type(2) {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 47px;
     line-height: 48px;
-    color: #000000;
 }
 
 .brands ul {
@@ -155,11 +170,14 @@ table tr:nth-of-type(2) {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 16px;
     line-height: 40px;
-    color: #000000;
 }
 
 footer {
     background: #464646;
+}
+
+footer ul {
+    list-style: none;
 }
 
 footer a,
@@ -173,7 +191,6 @@ footer .user-interface button {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    color: #000000;
 }
 
 .write-us input[type="text"],
@@ -185,7 +202,6 @@ footer .user-interface button {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 47px;
     line-height: 48px;
-    color: #000000;
 }
 
 .breadcrumbs {
@@ -213,7 +229,6 @@ footer .user-interface button {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    color: #000000;
 }
 
 .inner-page ul {
@@ -221,7 +236,6 @@ footer .user-interface button {
 }
 
 .inner-page label {
-    color: #000000;
     font-size: 14px;
     line-height: 40px;
 }
@@ -230,13 +244,16 @@ footer .user-interface button {
     font-family: "Open Sans";
     font-size: 14px;
     line-height: 18px;
-    color: rgba(0,0,0,0.3);
+    opacity: 0.3;
 }
 
 h3 {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
+}
+
+.catalog-list a {
     color: #000000;
 }
 
@@ -244,6 +261,7 @@ h3 {
     font-family: "Gilroy Light", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
+    color: #464646;
 }
 
 .label-new {
