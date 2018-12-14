@@ -9,14 +9,14 @@
   <body class="inner-page">
       <header>
           <div class="index-column">
-          <a href="#" class="main-header-logo">
+          <a class="main-header-logo">
               <img src="img/logo.svg" widtn="164" height="35" alt="Логотип">
           </a>
           <section class="user-interface">
               <h2 class="visually-hidden">Интерфейс пользователя</h2>
               <form action="#" method="get">
-                  <input type="text" id="search" name="search" placeholder="Поиск по сайту">
-                  <button type="submit" class="search-button">Поиск</button>
+                  <input type="search" name="search" placeholder="Поиск по сайту">
+                  <button type="submit" class="search-button visually-hidden">Найти</button>
               </form>
               <ul class="user-login">
                   <li class="user-icon"><a href="#">
@@ -24,35 +24,36 @@
                       </a></li>
                   <li class="user-name visually-hidden"><a href="#">Валентин Петухов</a></li>
                   <li class="login-link"><a class="button-small" href="#">Вход</a></li>
-                  <li class="login-exit visually-hidden"><button class="button-small">Выход</button></li>
+                  <li class="login-exit visually-hidden"><a class="button-small" href="#">Выход</a></li>
               </ul>
               <a href="#">
                 <img src="img/compare.svg" width="10" height="10" alt="compare-icon">
-                <p class="button-small">Сравнить</p>
+                Сравнить
               </a>
               <a href="#">
                 <img src="img/cart.svg" width="12" height="12" alt="bascet-icon">
-                <p class="button-small">Корзина</p>
+                Корзина
               </a>
           </section>
           <nav class="main-navigation">
               <ul class="site-navigation">
-                  <li><a href="catalog.html">Каталог</a></li>
-                  <li class="show-popular-icon">
+                  <li><a href="catalog.html">
+                      Каталог
                       <img src="img/plus.png" width="16" height="16">
+                      </a>
                   </li>
                   <li><a href="#">Доставка</a></li>
                   <li><a href="#">Гарантия</a></li>
                   <li><a href="#">Контакты</a></li>
               </ul>
-                      <ul class="popular-list visually-hidden">
-                          <li class="popular-item first-column"><a href="#">Виртуальная реальность</a></li>
-                          <li class="popular-item first-column"><a href="#">Моноподы для селфи</a></li>
-                          <li class="popular-item first-column"><a href="#">Экшн-камеры</a></li>
-                          <li class="popular-item second-column"><a href="#">Фитнес-браслеты</a></li>
-                          <li class="popular-item second-column"><a href="#">Умные часы</a></li>
-                          <li class="popular-item third-column"><a href="#">Квадрокоптеры</a></li>
-                      </ul>
+              <ul class="popular-list visually-hidden">
+                  <li class="popular-item first-column"><a href="#">Виртуальная реальность</a></li>
+                  <li class="popular-item first-column"><a href="#">Моноподы для селфи</a></li>
+                  <li class="popular-item first-column"><a href="#">Экшн-камеры</a></li>
+                  <li class="popular-item second-column"><a href="#">Фитнес-браслеты</a></li>
+                  <li class="popular-item second-column"><a href="#">Умные часы</a></li>
+                  <li class="popular-item third-column"><a href="#">Квадрокоптеры</a></li>
+              </ul>
           </nav>
           </div>
       </header>
@@ -67,6 +68,7 @@
           </ul>
           
           <section>
+              <div class="filter-bg">
               <h2>Фильтр</h2>
               <form action="#" method="get">
                   <fieldset>
@@ -113,53 +115,56 @@
                   </fieldset>
                   <button type="submit" class="button">Показать</button>
               </form>
+              </div>
           </section>
           
           <section>
+              <div class="filter-bg">
               <h2>Сортировка:</h2>
-              <ul class="sort-to">
+              <ul class="sort">
                   <li><a href="#">по цене</a></li>
                   <li><a href="#">по типу</a></li>
                   <li><a href="#">по популярности</a></li>
               </ul>
-              <ul class="sort-way">
-                  <li><a href="#">вверх</a></li>
-                  <li><a href="#">вниз</a></li>
+              <ul class="sort sort-way">
+                  <li><a class="up-way" href="#">вверх</a></li>
+                  <li><a class="down-way" href="#">вниз</a></li>
               </ul>
+              </div>
           </section>
           
           <section>
               <h2 class="visually-hidden">Список моноподов для селфи</h2>
               <ul class="catalog-list">
-                  <li catalog-item>
+                  <li class="catalog-item">
                       <a href="#"><h3 class="product-name">Любительская ceлфи-палка</h3></a>
                       <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                      <span class="visually-hidden button button-add-to-basket">Добавить в корзину</span>
-                      <span class="visually-hidden button-add-to-compare">Добавить к сравнению</span>
+                      <button class="visually-hidden button">В корзину</button>
+                      <button class="visually-hidden add-to-compare">Добавить к сравнению</button>
                       <p class="price">500 руб.</p>
                       <p class="label-new visually-hidden">New</p>
                   </li>
-                  <li catalog-item>
+                  <li class="catalog-item">
                       <a href="#"><h3 class="product-name">Профессиональная селфи-палка</h3></a>
                       <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                      <span class="visually-hidden button button-add-to-basket">Добавить в корзину</span>
-                      <span class="visually-hidden button-add-to-compare">Добавить к сравнению</span>
+                      <button class="visually-hidden button">В корзину</button>
+                      <button class="visually-hidden add-to-compare">Добавить к сравнению</button>
                       <p class="price">1 500 руб.</p>
                       <p class="label-new visually-hidden">New</p>
                   </li>
-                  <li catalog-item>
+                  <li class="catalog-item">
                       <a href="#"><h3 class="product-name">Непотопляемая селфи-палка</h3></a>
                       <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                      <span class="visually-hidden button button-add-to-basket">Добавить в корзину</span>
-                      <span class="visually-hidden button-add-to-compare">Добавить к сравнению</span>
+                      <button class="visually-hidden button">B корзину</button>
+                      <button class="visually-hidden add-to-compare">Добавить к сравнению</button>
                       <p class="price">2 500 руб.</p>
                       <p class="label-new visually-hidden">New</p>
                   </li>
-                   <li catalog-item>
+                   <li class="catalog-item">
                       <a href="#"><h3 class="product-name">Селфи-палка «Следуй за мной»</h3></a>
                       <img src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»">
-                      <span class="visually-hidden button button-add-to-basket">Добавить в корзину</span>
-                      <span class="visually-hidden button-add-to-compare">Добавить к сравнению</span>
+                      <button class="visually-hidden button">В корзину</button>
+                      <button class="visually-hidden add-to-compare">Добавить к сравнению</button>
                       <p class="price">4 900 руб.</p>
                       <p class="label-new">New</p>
                   </li>
@@ -167,38 +172,40 @@
           </section>
           
           <section>
+              <div class="filter-bg">
               <ul class="paginator">
-                  <li class="paginator-item"><a href="#">назад</a></li>
-                  <li class="paginator-item"><a href="#">1</a></li>
-                  <li class="paginator-item"><a href="#">2</a></li>
-                  <li class="paginator-item"><a href="#">3</a></li>
-                  <li class="paginator-item"><a href="#">вперед</a></li>
+                  <li class="paginator-back"><a href="#">назад</a></li>
+                  <li class="paginator-number"><a href="#">1</a></li>
+                  <li class="paginator-number"><a href="#">2</a></li>
+                  <li class="paginator-number"><a href="#">3</a></li>
+                  <li class="paginator-next"><a href="#">вперед</a></li>
               </ul>
+              </div>
           </section>
       </main>
       
-      <footer>
+            <footer>
           <div class="container">
-           <a href="#" class="footer-logo">
+           <a class="footer-logo">
                 <img src="img/logo-footer.svg" widtn="163" height="35" alt="Логотип">
               </a>
           <section class="user-interface">
               <h2 class="visually-hidden">Интерфейс пользователя</h2>
               <ul class="footer-user-login">
                   <li class="footer-user-icon"><a href="#">
-                      <img src="img/user.svg" width="13" height="12" alt="user-icon">
+                      <img src="img/footer-user.svg" width="13" height="12" alt="user-icon">
                   </a></li>
                   <li class="footer-user-name visually-hidden"><a href="#">Валентин Петухов</a></li>
                   <li class="footer-login-link"><a href="#" class="button-small">Вход</a></li>
-                  <li class="footer-login-exit visually-hidden"><button class="button-small">Выход</button></li>
+                  <li class="footer-login-exit visually-hidden"><a class="button-small">Выход</a></li>
               </ul>
               <a href="#">
-                <img src="img/compare.svg" width="10" height="10" alt="compare-icon">
-                  <p class="button-small">Сравнить</p>
+                <img src="img/footer-compare.svg"  width="10" height="10" alt="compare-icon">
+                Сравнить
               </a>
               <a href="#">
-                <img src="img/cart.svg" width="12" height="12" alt="bascet-icon">
-                <p class="button-small">Корзина</p>
+                <img src="img/footer-cart.svg" width="12" height="12" alt="bascet-icon">
+                Корзина
               </a>
           </section>
           <p class="adress">г. Москва, ул. Строителей, 15</p>

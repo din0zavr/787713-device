@@ -1,13 +1,13 @@
 @font-face {
     font-family: "Open Sans";
-    src: url("opensans.woff") format("woff"),
-         url("opensans.woff2") format("woff2");
+    src: url("fonts/opensans.woff") format("woff"),
+         url("fonts/opensans.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Open Sans Light";
-    src: url("opensanslight.woff") format("woff"),
-         url("opensanslight.woff2") format("woff2");
+    src: url("fonts/opensanslight.woff") format("woff"),
+         url("fonts/opensanslight.woff2") format("woff2");
 }
 
 @font-face {
@@ -43,34 +43,57 @@ a {
     background-color: #f7e296;
 }
 
-/*
+header ul,
+footer ul {
+    list-style: none;
+}
+
+header a {
+    color: #000000;
+}
+
+header a:hover,
 header a:focus,
-header a:hover {
+footer a:hover,
+footer a:focus {
     opacity: 0.6;
 }
-*/
 
-.user-interface input[type="search"] {
+header a:active,
+footer a:active {
+    opacity: 0.3;
+}
+
+header input[type="search"] {
     font: inherit;
+    
+    background: #f7e296;
+    border: none;
+    outline: none;
 } 
 
-/*.user-interface input[type="search"]:link {*/
+header input[type="search"]:focus {
+    width: 355px;
+    border-bottom: 2px solid #000000;
+}
+
+.search-button {
+    height: 50px;
+    width: 85px;
     
-}
-.user-interface ul {
-    list-style: none;
-}
-
-.user-interface a {
-    color: #000000;
+    background: none;
+    border: 2px solid #000000;
 }
 
-.main-navigation ul {
-    list-style: none;
+.search-button:focus,
+.search-button:hover {
+    color: #ffffff;
+    
+    background: #000000;
 }
 
-.main-navigation a {
-    color: #000000;
+.search-button:active {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .site-navigation {
@@ -83,6 +106,21 @@ header a:hover {
 .popular-list {
     line-height: 36px;
 }
+
+/*
+.visually-hidden {
+    position: absolute;
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden:
+}
+*/
 
 .preview {
     text-align: left;
@@ -113,15 +151,39 @@ header a:hover {
 .contacts p {
     color: #464646;
 }
+
 .button {
+    display: block;
+    width: 220px;
+    height: 40px;
+    
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 40px;
     color: #000000;
     text-align: center;
     text-transform: uppercase;
     
-    background-color: #f0c52e;
+    background-color: transparent;
+    background-image: linear-gradient(transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%, transparent);
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+}
+@keyframes full-yellow {
+    to {
+       background-image:  linear-gradient(transparent 0%,#f0c52e 0%, #f0c52e 100%, transparent 100%, transparent);
+    }
+}
+
+.button:hover {
+    animation-name: full-yellow;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.button:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 table tr:nth-of-type(1) {
@@ -150,7 +212,15 @@ table tr:nth-of-type(2) {
     vertical-align: top;
 }
 
-.service-slider ul{
+.service-button:active {
+    width: 280px;
+    color: #f7e184;
+    
+    background-color: #000000;
+    background-image: none;
+}
+
+.service-slider ul {
     list-style: none;
 }
 
@@ -166,6 +236,13 @@ table tr:nth-of-type(2) {
     list-style: none;
 }
 
+.brands a {
+    font-size: 0;
+}
+.brands a:hover {
+    opacity: 0.2;
+}
+
 .about ul {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 16px;
@@ -176,9 +253,6 @@ footer {
     background: #464646;
 }
 
-footer ul {
-    list-style: none;
-}
 
 footer a,
 footer p,
@@ -187,6 +261,13 @@ footer .user-interface button {
     color: #ffffff;
 }
 
+.social-button {
+    opacity: 0.3;
+}
+
+.social-button:active {
+    opacity: 0.1;
+}
 .write-us label {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
@@ -195,7 +276,49 @@ footer .user-interface button {
 
 .write-us input[type="text"],
 .write-us textarea {
-    font-family: "Open Sans"
+    font-family: "Open Sans";
+    
+    border: none;
+    background: #f2f2f2;
+}
+
+.write-us input[type="text"]:hover,
+.write-us textarea:hover {
+    background: #eaeaea;
+}
+
+.write-us input[type="text"]:focus,
+.write-us textarea:focus {
+    background: none;
+    border: 2px solid #f7e296;
+    outline: none;
+} 
+
+.write-us input[type="text"]:invalid,
+.write-us textarea:invalid {
+    background: #f6dada;
+}
+
+.modal-close {
+    width: 55px;
+    height: 55px;
+    
+    font-size: 0;
+    
+    border-radius: 50%;
+    background-color: #ffffff;
+    background-image: url(img/modal-close.png);
+    border: none;
+    opacity: 0.5;
+    outline: none;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-close:active {
+    opacity: 0.3;
 }
 
 .inner-page h1 {
@@ -204,13 +327,26 @@ footer .user-interface button {
     line-height: 48px;
 }
 
+main a {
+    color: #000000;
+}
 .breadcrumbs {
     list-style: none;
 }
 
-.breadcrumbs a,
-.breadcrumbs li {
-    color: rgba(0, 0, 0, 0.3);
+
+.breadcrumbs li:last-of-type,
+.breadcrumbs a {
+    opacity: 0.3;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+    opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+    opacity: 0.1;
 }
 
 .inner-page h2 {
@@ -218,8 +354,66 @@ footer .user-interface button {
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
-    color: #000000;
 }
+
+.sort a,
+.paginator-number a {
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.3;
+}
+
+.sort a:hover,
+.sort a:focus,
+.paginator-number a:hover,
+.paginator-number a:focus {
+    opacity: 0.6;
+}
+
+.sort a:active,
+.paginator-number a:active {
+    opacity: 1;
+}
+
+.sort-way a {
+    display: block;
+    width: 11px;
+    height: 10px;
+    
+    font-size: 0;
+    
+}
+
+.up-way  {
+    background: url(img/icon-up.svg) no-repeat;
+}
+
+.down-way {
+    background: url(img/icon-down.svg) no-repeat;
+}
+
+.catalog-item img:hover {
+    opacity: 0.7;
+}
+
+.add-to-compare {
+    border: none;
+    background: none;
+    opacity: 0.5;
+    outline: none;
+}
+
+
+.add-to-compare:hover,
+.add-to-compare:focus {
+    opacity: 1;
+}
+
+.add-to-compare:active {
+    opacity: 0.2;
+}
+
 .inner-page fieldset {
     border: none;
     border-top: 2px solid #000000;
@@ -240,21 +434,11 @@ footer .user-interface button {
     line-height: 40px;
 }
 
-.sort-to a {
-    font-family: "Open Sans";
-    font-size: 14px;
-    line-height: 18px;
-    opacity: 0.3;
-}
 
-h3 {
+.inner-page h3 {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
-}
-
-.catalog-list a {
-    color: #000000;
 }
 
 .price {
@@ -271,7 +455,7 @@ h3 {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 14px;
     line-height: 60px;
-    color: rgba(0, 0, 0, 0.2);
+    opacity: 0.2;
     text-align: center;
     text-transform: uppercase;
     
@@ -279,10 +463,26 @@ h3 {
     border-radius: 50%;
 }
 
-.paginator a{
+.paginator a {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
-    color: #000000;
+}
+
+
+.filter-bg {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.paginator-back a:hover,
+.paginator-back a:focus,
+.paginator-next a:hover,
+.paginator-next a:focus {
+     background: rgba(0, 0, 0, 0.08);
+}
+
+.paginator-back a:active,
+.paginator-next a:active {
+    color: rgba(0, 0, 0, 0.3);
 }

@@ -347,3 +347,8 @@ template {
 [hidden] {
   display: none;
 }
+/*скрывает текст placeholder при фокусе*/
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
