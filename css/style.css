@@ -23,6 +23,21 @@
     
 }
 
+@keyframes full-yellow {
+    to {
+       background-image:  linear-gradient(transparent 0%,#f0c52e 0%, #f0c52e 100%, transparent 100%, transparent);
+    }
+}
+
+@keyframes full-black {
+    from {
+       background-image:  linear-gradient(transparent 0%,#f0c52e 0%, #f0c52e 100%, transparent 100%, transparent);
+    }
+    to {
+    background-image: linear-gradient(#000000 0%,#000000 100%);
+    }
+}
+
 body {
     width: 1440px;
     
@@ -39,6 +54,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #000000;
 }
 
 .container {
@@ -55,26 +71,18 @@ footer ul {
 }
 
 .main-header {
-/*    border: 1px solid transparent;*/
     margin-top: 40px;
     padding: 40px 60px;
 /*    margin-bottom: -115px;*/
     
     background-color: #f7e296;
 }
-/*
-.header-container {
-    width: 1040px;
-    margin: 40px auto;
-    outline: 2px solid green;
-}
-*/
+
 .main-header-logo {
     position: absolute;
     top: 23px;
     left: 197px;
 }
-
 
 .user-interface {
     display: flex;
@@ -109,7 +117,7 @@ header {
 
 .user-interface > a:first-of-type {
     margin-right: 35px;
-     white-space: nowrap;
+    white-space: nowrap;
 }
 
 .user-interface > a:last-of-type {
@@ -158,10 +166,6 @@ header {
 
 .popular ul:nth-of-type(3) {
     margin-left: 80px;
-}
-
-.main-header a {
-    color: #000000;
 }
 
 header a:hover,
@@ -234,6 +238,8 @@ header input[type="search"]:focus {
 }
 
 .product-slider {
+    margin-bottom: 125px;
+    outline: 2px solid red;
 /*    overflow: hidden;*/
 }
 
@@ -263,7 +269,7 @@ header input[type="search"]:focus {
     font-size: 0;
 }
 
-.product-slider .slider-button-active {
+.product-slider .active {
     background-image: url(img/slider-button-active.svg);
 }
 
@@ -271,13 +277,14 @@ header input[type="search"]:focus {
     display: flex;
     
     width: 300%;
+    
 }
 
 .slider-slides li {
     display: flex;
     
     width: 1160px;
-    outline: 2px solid red;
+    outline: 2px solid green;
 }
 
 .slider-slides li img {
@@ -340,7 +347,6 @@ header input[type="search"]:focus {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 40px;
-    color: #000000;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -351,11 +357,7 @@ header input[type="search"]:focus {
     border: none;
     outline: none;
 }
-@keyframes full-yellow {
-    to {
-       background-image:  linear-gradient(transparent 0%,#f0c52e 0%, #f0c52e 100%, transparent 100%, transparent);
-    }
-}
+
 
 .button:hover {
     animation-name: full-yellow;
@@ -379,34 +381,187 @@ table tr:nth-of-type(2) {
     color: #464646;
 }
 
+.category {
+    margin-bottom: 90px;
+}
 
 .category-list {
-    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.category-list li {
+    width: 160px;
 }
 
 .category-list a {
-    color: #000000;
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    text-align: left;
-    vertical-align: top;
 }
 
-.service-button:active {
+.category-list a:first-child {
+    display: block;
+    
+    width: 160px;
+    height: 160px;
+    
+    background-color: rgba(240, 197, 46, 0.5);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.category-list a:first-child:hover,
+.category-list a:first-child:focus {
+    background-color: rgb(240, 197, 46); 
+}
+/*не допер как сделать лучше*/
+.virt {
+    background-image: url(img/popular-1.svg);
+}
+
+.virt:active {
+    background-image: url(img/popular-1-trans.svg);
+    
+}
+
+.monopod {
+    background-image: url(img/popular-2.svg);
+    background-position: bottom;
+}
+
+.monopod:active {
+    background-image: url(img/popular-2-trans.svg);
+}
+
+.action-cam {
+    background-image: url(img/popular-3.svg);
+}
+
+.action-cam:active {
+    background-image: url(img/popular-3-trans.svg)
+}
+
+.fitnes-armlet {
+    background-image: url(img/popular-4.svg);
+}
+
+.fitnes-armlet:active {
+    background-image: url(img/popular-4-trans.svg);
+}
+
+.smart-watch {
+    background-image: url(img/popular-5.svg);
+}
+
+.smart-watch:active {
+    background-image: url(img/popular-5-trans.svg);
+}
+
+.quadcopt {
+    background-image: url(img/popular-6.svg);
+}
+
+.quadcopt:active {
+    background-image: url(img/popular-6-trans.svg);
+}
+
+
+
+
+
+
+.service-slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-slider-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-slider-controls li {
+    margin-bottom: 15px;
+}
+.slider-show {
+    width: 880px;
+    
+/*    overflow: hidden;*/
+    
+    box-shadow: inset 14px 0 0 -7px black;
+    outline: 2px solid red;
+}
+
+.service-slider .slider-slides {
+    width: 300%
+}
+
+.service-slider .slider-slides li {
+    display: flex;
+    
+    width: 880px;
+    
+    outline: 2px solid green;
+    
+}
+
+.slider-slides li::after {
+    content: "";
+    
+    margin: 0 auto;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slide-content {
+    width: 420px;
+    margin-left: 120px;
+}
+
+.delivery::after {
+    background-image: url(img/delivery.svg);
+}
+
+.warranty::after {
+    background-image: url(img/warranty.svg);
+}
+
+.credit::after {
+    background-image: url(img/credit.svg);
+}
+.service-slider .button {
+    width: 160px;
+}
+
+.service-slider .button:active,
+.service-slider .active {
     width: 280px;
+    padding-right: 120px;
+    
     color: #f7e184;
     
-    background-color: #000000;
-    background-image: none;
+    background-image: linear-gradient(#000000 0%,#000000 100%);
+    
+    animation-name: full-black;
+    animation-duration: 0s;
 }
 
 .service-slider ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.slider-slides-service h3,
+.service-slider h3,
 .about h2,
 .contacts h2 {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
@@ -509,9 +664,6 @@ footer .user-interface button {
     line-height: 48px;
 }
 
-main a {
-    color: #000000;
-}
 .breadcrumbs {
     list-style: none;
 }

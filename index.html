@@ -23,7 +23,7 @@
                       <li class="user-icon"><a href="#">
                           <img src="img/user.svg" width="13" height="12" alt="user-icon">
                           </a></li>
-                      <li class="user-name"><a href="#">Валентан fssssdsssssvvvvvvvvvvffffffffffffffffffffffffffsssssssssssssssss</a></li>
+                      <li class="user-name"><a href="#">Валентан fssssdsssssvvvvvsssssssssssssssss</a></li>
     <!--                  временный класс-->
                       <li class="login-link vis-h"><a class="button-small" href="#">Вход</a></li>
                       <li class="login-exit visually-hidden"><a class="button-small" href="#">Выход</a></li>
@@ -73,7 +73,7 @@
           <section class="product-slider">
               <h2 class="visually-hidden vis-h">Предпросмотр</h2>
                   <ul class="slider-controls">
-                      <li><button class="slider-button-active">Первый слайд</button></li>
+                      <li><button class="active">Первый слайд</button></li>
                       <li><button>Второй слайд</button></li>
                       <li><button>Третий слайд</button></li>
                   </ul>
@@ -144,49 +144,65 @@
           </section>
           
           <section class="category">
-              <h2 class="visually-hidden">Категории товара</h2>
+<!--              временный класс-->
+              <h2 class="visually-hidden vis-h">Категории товара</h2>
+<!--              не допер как сделать лучше-->
               <ul class="category-list">
-                  <li class="category-item"><a href="img/popular-1.svg" width="97" height="55">Виртуальная реальность</a></li>
-                  <li class="category-item"><a href="img/popular-2.svg" width="87" height="117">Моноподы для селфи</a></li>
-                  <li class="category-item"><a href="img/popular-3.svg" width="71" height="87">Экшн-камеры</a></li>
-                  <li class="category-item"><a href="img/popular-4.svg" width="107" height="65">Фитнес-браслеты</a></li>
-                  <li class="category-item"><a href="img/popular-5.svg" width="56" height="98">Умные часы</a></li>
-                  <li class="category-item"><a href="img/poppular-6.svg" width="132" height="69">Квадрокоптеры</a></li>
+                  <li>
+                      <a class="virt" href="#"></a>
+                      <a href="#">Виртуальная реальность</a>
+                  </li>
+                  <li>
+                      <a class="monopod" href="#"></a>
+                      <a href="#"><div></div>Моноподы для селфи</a>
+                  </li>
+                  <li>
+                      <a class="action-cam" href="#"></a>
+                      <a href="#">Экшн-камеры</a>
+                  </li>
+                  <li>
+                      <a class="fitnes-armlet" href="#"></a>
+                      <a href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li>
+                      <a class="smart-watch"></a>
+                      <a href="#">Умные часы</a>
+                  </li>
+                  <li>
+                      <a class="quadcopt" href="#"></a>
+                      <a href="#">Квадрокоптеры</a></li>
               </ul>
           </section>
           
-          <div class="background-service">
-             <div class="container"></div>
-          </div>
-          
-          <section class="service">
-              <h2 class="visually-hidden">Сервис</h2>
-              <div class="service-slider">
-                  <ul class="slider-button">
-                      <li><button class="button service-button">Доставка</button></li>
-                      <li><button class="button service-button">Гарантия</button></li>
-                      <li><button class="button service-button">Кредит</button></li>
-                  </ul>
-                  <div class="inner">
-                      <div class="slider-slides-service">
-                          <div class="delivery">
+          <section class="service-slider">
+              <h2 class="visually-hidden vis-h">Сервис</h2>
+                <ul class="service-slider-controls">
+                    <li><button class="button active">Доставка</button></li>
+                    <li><button class="button">Гарантия</button></li>
+                    <li><button class="button">Кредит</button></li>
+                </ul>
+                <div class="slider-show">
+                      <ul class="slider-slides">
+                          <li class="delivery">
+                              <div class="slide-content">
                               <h3>Доставка</h3>
                               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-                              <img src="img/delivery.svg" width="136" height="164">
-                          </div>
-                          <div class="warranty">
+                              </div>
+                          </li>
+                          <li class="warranty">
+                              <div class="slide-content">
                               <h3>Гарантия</h3>
-                              <p >Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.Товар, не дом, конечно же.</p>
-                              <img src="img/warranty.svg" width="171" height="195">
-                          </div>
-                          <div class="credit">
+                              <p >Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                              </div>
+                          </li>
+                          <li class="credit">
+                              <div class="slide-content">
                               <h3>Кредит</h3>
                               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-                              <img src="img/credit.svg" width="156" height="188">
-                          </div>
-                      </div>
+                              </div>
+                          </li>
+                      </ul>
                   </div>
-              </div>
           </section>
           
           <section class="brands">
