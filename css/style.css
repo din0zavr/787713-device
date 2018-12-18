@@ -86,7 +86,8 @@ footer ul {
 
 .user-interface {
     display: flex;
-    align-items: baseline;
+    align-items: center;
+/*    justify-content: space-between;*/
     
     margin-bottom: 40px;
 }
@@ -111,16 +112,17 @@ footer ul {
 }
 
 main,
-header {
+header,
+footer {
     outline: 2px solid blue;
 }
 
-.user-interface > a:first-of-type {
+.compare {
     margin-right: 35px;
     white-space: nowrap;
 }
 
-.user-interface > a:last-of-type {
+.cart {
      white-space: nowrap;
 }
 
@@ -133,8 +135,10 @@ header {
     margin-right: auto;
 }
 
+
 .site-navigation {
     display: flex;
+/*    justify-content: space-between;*/
     
     margin-bottom: 35px;
     
@@ -156,7 +160,7 @@ header {
     margin-right: 100px;
 }
 
-.site-navigation li:last-child {
+.site-navigation li:last-child a {
     outline: 2px solid red;
 }
 
@@ -591,7 +595,6 @@ table tr:nth-of-type(2) {
 
 .index-column {
     display: flex;
-    margin-bottom: 85px;
 }
 
 .index-column section {
@@ -600,9 +603,9 @@ table tr:nth-of-type(2) {
     justify-content: space-between;
 }
 
-.index-column section::before {
+.index-column section::before,
+.adress::after {
     content: "";
-    
     display: block;
     
     width: 60px;
@@ -626,6 +629,10 @@ table tr:nth-of-type(2) {
     margin-bottom: 60px;
 }
 
+.about .button,
+.contacts .button {
+    margin-bottom: 85px;
+}
 .bg-grey {
     position: absolute;
     top: 1540px;
@@ -636,16 +643,65 @@ table tr:nth-of-type(2) {
     
     background-color: #e5e5e5;
 }
-footer {
+
+.main-footer {
     background: #464646;
+    padding: 65px 0;
 }
 
+.footer-logo {
+    margin-right: auto;
+}
 
-footer a,
+.adress::after {
+    background-color: #ffc600;
+    margin-top: 80px;
+}
+
+footer .wrapper,
+.service-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-list,
+.phone {
+    margin-bottom: 60px;
+}
+
 footer p,
-footer .user-interface a,
-footer .user-interface button {
+footer a,
+footer button {
     color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.service-list li:nth-child(2) {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.social-list li:nth-child(2) {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.html-icon {
+    float: right;
+}
+
+.service-list a {
+    font-family: "Gilroy ExtraBold", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .social-button {
@@ -655,6 +711,39 @@ footer .user-interface button {
 .social-button:active {
     opacity: 0.1;
 }
+
+
+.write-us {
+/*
+    position: absolute;
+    top: 10px;
+    left: 10px;
+*/
+    display: flex;
+}
+
+.write-us form {
+    width: 760px;
+    margin-left: 100px;
+}
+
+.modal-close {
+    margin: 22px;
+}
+
+.write-us .index-column {
+    margin-top: 85px;
+    margin-bottom: 40px;
+    
+}
+
+.index-column div {
+    width: 380px;
+}
+.form-user-name {
+    margin-right: 30px;
+}
+
 .write-us label {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 18px;
@@ -663,10 +752,22 @@ footer .user-interface button {
 
 .write-us input[type="text"],
 .write-us textarea {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
     font-family: "Open Sans";
     
     border: none;
     background: #f2f2f2;
+}
+
+.write-us textarea {
+    margin-bottom: 40px;
+    resize: none;
+}
+
+.write-us form button {
+    margin-bottom: 85px;
 }
 
 .write-us input[type="text"]:hover,
@@ -677,8 +778,7 @@ footer .user-interface button {
 .write-us input[type="text"]:focus,
 .write-us textarea:focus {
     background: none;
-    border: 2px solid #f7e296;
-    outline: none;
+    outline: 2px solid #f7e296;
 } 
 
 .write-us input[type="text"]:invalid,
@@ -708,6 +808,21 @@ footer .user-interface button {
     opacity: 0.3;
 }
 
+.map {
+    /*
+    position: absolute;
+    top: 10px;
+    left: 10px;
+*/
+    display: flex;
+}
+
+.map button {
+    margin-left: -80px;
+    z-index: 2;
+}
+
+/*----------------------------------------------------------------*/
 .inner-page h1 {
     font-family: "Gilroy ExtraBold", "Arial", sans-serif;
     font-size: 47px;
