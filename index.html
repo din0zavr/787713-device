@@ -16,49 +16,39 @@
                     <section class="user-interface">
             <!--              временный класс vis-h-->
                         <h2 class="visually-hidden vis-h">Интерфейс пользователя</h2>
-                        <form action="#" method="get">
-                            <input type="search" name="search" placeholder="Поиск по сайту">
-                            <button type="submit" class="search-button visually-hidden">Найти</button>
+                        <form class="search" action="#" method="get">
+                            <p>
+                                <input class="test" type="search" name="search" placeholder="Поиск по сайту">
+                            </p>
+                            <button type="submit" class="search-button visually-hidden vis-h">Найти</button>
                         </form>
                         <div class="wrapper">
                             <ul class="user-login">
-                                <li class="user-icon">
-                                    <a href="#">
-                                        <img src="img/user.svg" width="13" height="12" alt="user-icon">
-                                    </a>
-                                </li>
-                                <li class="user-name"><a href="#">Валентин Петухов</a></li>
-                                <li class="login-link vis-h"><a class="button-small" href="#">Вход</a></li>
-                                <li class="login-exit visually-hidden"><a class="button-small" href="#">Выход</a></li>
+                                <li><a class="user-icon" href="#">Профайл</a></li>
+                                <li><a class="user-name vis-h" href="#">Валентин Петухов</a></li>
+                                <li><a class="login-link" href="#">Войти</a></li>
+                                <li><a class="login-exit visually-hidden vis-h" href="#">Выход</a></li>
                             </ul>
-                            <a class="compare" href="#">
-                                <img src="img/compare.svg" width="10" height="10" alt="compare-icon">
-                                Сравнить
-                            </a>
-                            <a class="cart" href="#">
-                                <img src="img/cart.svg" width="12" height="12" alt="bascet-icon">
-                                Корзина
-                            </a>
+                            <a class="compare" href="#">Сравнить</a>
+                            <a class="cart" href="#">Корзина</a>
                         </div>
                     </section>
                     <nav class="main-navigation">
                         <ul class="site-navigation">
-                            <li><a href="catalog.html">
-                                Каталог товаров
-                                <img src="img/plus.png" width="16" height="16">
-                                </a>
+                            <li>
+                                <a class="show-popular" href="catalog.html">Каталог товаров</a>
+                                <ul class="popular">
+                                    <li><a href="#">Виртуальная реальность</a></li>
+                                    <li><a href="#">Моноподы для селфи</a></li>
+                                    <li><a href="#">Экшн-камеры</a></li>
+                                    <li><a href="#">Фитнес-браслеты</a></li>
+                                    <li><a href="#">Умные часы</a></li>
+                                    <li><a href="#">Квадрокоптеры</a></li>
+                                </ul>
                             </li>
                             <li><a href="#">Доставка</a></li>
                             <li><a href="#">Гарантия</a></li>
                             <li><a href="#">Контакты</a></li>
-                        </ul>
-                        <ul class="popular">
-                            <li><a href="#">Виртуальная реальность</a></li>
-                            <li><a href="#">Моноподы для селфи</a></li>
-                            <li><a href="#">Экшн-камеры</a></li>
-                            <li><a href="#">Фитнес-браслеты</a></li>
-                            <li><a href="#">Умные часы</a></li>
-                            <li><a href="#">Квадрокоптеры</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -84,8 +74,7 @@
                                 <div class="wrapper-caption">
                                     <h3>01</h3>
                                 </div>
-                                <b>Делай селфи, </b>
-                                <b>как Бен Стиллер!</b>
+                                <b>Делай селфи, <br>как Бен Стиллер!</b>
                                 <p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                                 <a class="button" href="#">Подробнее</a>
                                 <table>
@@ -110,8 +99,7 @@
                                 <div class="wrapper-caption">
                                     <h3>02</h3>
                                 </div>
-                                <b>Худеем</b>
-                                <b>правильно!</b>
+                                <b>Худеем <br>правильно!</b>
                                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы <br>не пропускать занятия и соблюдать диету.</p>
                                 <a class="button" href="#">Подробнее</a>
                                 <table>
@@ -132,8 +120,7 @@
                                 <div class="wrapper-caption">
                                     <h3>03</h3>
                                 </div>
-                                <b>Порхает как бабочка, </b>
-                                <b>жалит как пчела!</b>
+                                <b>Порхает как бабочкa,<br>жалит как пчела!</b>
                                 <p>Этот обычный, на первый взгляд, квадрокоптер оснащен <br>мощным лазером, замаскированным под стандартную камеру.</p>
                                 <a class="button" href="#">Подробнее</a>
                                 <table>
@@ -156,28 +143,22 @@
                     <h2 class="visually-hidden vis-h">Категории товара</h2>
 <!--              не допер как сделать лучше-->
                     <ul class="category-list">
-                        <li>
-                            <a class="virt" href="#"></a>
+                        <li class="virt">
                             <a href="#">Виртуальная реальность</a>
                         </li>
-                        <li>
-                            <a class="monopod" href="#"></a>
-                            <a href="#"><div></div>Моноподы для селфи</a>
+                        <li class="monopod">
+                            <a href="#">Моноподы <br>для селфи</a>
                         </li>
-                        <li>
-                            <a class="action-cam" href="#"></a>
+                        <li class="action-cam">
                             <a href="#">Экшн-камеры</a>
                         </li>
-                        <li>
-                            <a class="fitnes-armlet" href="#"></a>
+                        <li class="fitnes-armlet">
                             <a href="#">Фитнес-браслеты</a>
                         </li>
-                        <li>
-                            <a class="smart-watch"></a>
+                        <li class="smart-watch">
                             <a href="#">Умные часы</a>
                         </li>
-                        <li>
-                            <a class="quadcopt" href="#"></a>
+                        <li class="quadcopt">
                             <a href="#">Квадрокоптеры</a>
                         </li>
                     </ul>
@@ -201,7 +182,7 @@
                             <li class="warranty">
                                 <div class="slide-content">
                                 <h3>Гарантия</h3>
-                                <p >Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                                <p >Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
                                 </div>
                             </li>
                             <li class="credit">
@@ -217,19 +198,39 @@
                 <section class="brands">
                     <h2 class="visually-hidden vis-h">Бренды производителей</h2>
                     <ul class="brand-list">
-                        <li><a href="#">dgi<img src="img/logo-1.jpg" width="260" height="100" alt="dji"></a></li>
-                        <li><a href="#">sp gadget<img src="img/logo-3-1.jpg" width="260" height="100" alt="sp gadget"></a></li>
-                        <li><a href="#">go pro<img src="img/logo-3.jpg" width="260" height="100" alt="go pro"></a></li>
-                        <li><a href="#">vive<img src="img/logo-4.jpg" width="260" height="100" alt="vive"></a></li>
+                        <li>
+                            <a href="#">
+                                dgi
+                                <img src="img/logo-1.jpg" width="260" height="100" alt="dji">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                sp gadget
+                                <img src="img/logo-3-1.jpg" width="260" height="100" alt="sp gadget">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                go pro
+                                <img src="img/logo-3.jpg" width="260" height="100" alt="go pro">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                vive
+                                <img src="img/logo-4.jpg" width="260" height="100" alt="vive">
+                            </a>
+                        </li>
                     </ul>
                 </section>
           
-                <div class="index-column">
+                <div class="index-column about/contacts">
                     <section class="about">
                         <h2>О нас</h2>
                         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
                         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-                        <ul>
+                        <ul class="shiping-company-list">
                             <li>Деловые линии</li>
                             <li>Автотрейдинг</li>
                             <li>ЖелДорЭкспедиция</li>
@@ -240,8 +241,8 @@
                     <section class="contacts">
                         <h2>Контакты</h2>
                         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                        <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш адрес г. Москва, ул. Строителей, 15"></a>
-                        <button class="button">Напишите нам</button>
+                        <a class="map" href="#"><img src="img/map.jpg" width="560" height="222" alt="Наш адрес г. Москва, ул. Строителей, 15"></a>
+                        <button class="button button-write-us">Напишите нам</button>
                     </section>
                 </div>
             </div>
@@ -253,27 +254,17 @@
                 <section class="user-interface">
                     <h2 class="visually-hidden vis-h">Интерфейс пользователя</h2>
                     <a class="footer-logo">
-                        <img src="img/logo-footer.svg" widtn="163" height="35" alt="Логотип">
+                        <img src="img/logo-footer.svg" width="163" height="35" alt="лого DEVICE">
                     </a>
                     <div class="wrapper">
                         <ul class="user-login">
-                            <li class="user-icon">
-                                <a href="#">
-                                    <img class="user-icon" src="img/footer-user.svg" width="13" height="12" alt="user-icon">
-                                </a>
-                            </li>
-                            <li class="user-name visually-hidden vis-"><a href="#">Валентин Петухов</a></li>
-                            <li><a href="#" class="login-link vis-h">Вход</a></li>
-                            <li class="login-exit visually-hidden vis-"><a class="">Выход</a></li>
+                            <li><a class="user-icon" href="#">Профайл</a></li>
+                            <li><a class="user-name vis-h" href="#">Валентин Петухов</a></li>
+                            <li><a href="#" class="login-link">Войти</a></li>
+                            <li><a class="login-exit vis-h">Выход</a></li>
                         </ul>
-                        <a class="compare" href="#">
-                            <img src="img/footer-compare.svg"  width="10" height="10" alt="compare-icon">
-                            Сравнить
-                        </a>
-                        <a class="cart" href="#">
-                            <img src="img/footer-cart.svg" width="12" height="12" alt="bascet-icon">
-                            Корзина
-                        </a>
+                        <a class="compare" href="#">Сравнить</a>
+                        <a class="cart" href="#">Корзина</a>
                     </div>
                 </section>
                 <div class="footer-wrapper">
@@ -288,27 +279,19 @@
                         </ul>
                         <ul class="social-list">
                             <li>
-                                <a class="social-button social-button-facebook" href="#">
-                                  <img src="img/fb.svg" width="32" height="32" alt="Фейсбук">
-                                </a>
+                                <a class="social-button social-button-facebook" href="#">Мы в facebook</a>
                             </li>
                             <li>
-                                <a class="social-button social-button-instagram" href="#">
-                                    <img src="img/instaram.svg" width="32" height="32" alt="Инстаграм">
-                                </a>
+                                <a class="social-button social-button-instagram" href="#">Мы в instagram</a>
                             </li>
                             <li>
-                                <a class="social-button social-button-twitter" href="#">
-                                    <img src="img/twitter.svg" width="32" height="32" alt="Твиттер">
-                                </a>
+                                <a class="social-button social-button-twitter" href="#">Мы в twitter</a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-right">
                         <p class="phone">Тел.: +7 (495) 495-95-95</p>
-                        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-icon">
-                            <img src="img/logo-html.svg" width="27" height="35" alt="HTML academy">
-                        </a>
+                        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-icon">htmlacademy</a>
                     </div>
                 </div>
             </div>
@@ -318,14 +301,14 @@
             <h2 class="visually-hidden vis-h">Напишите нам</h2>
             <form action="#" method="post">
                 <div class="index-column">
-                    <div class="user-name">
+                    <p class="user-name">
                         <label for="user-name">Ваше имя:</label>
                         <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
-                    </div>
-                    <div class="user-e-mail">
+                    </p>
+                    <p class="user-e-mail">
                         <label for="user-e-mail">Ваш e-mail:</label>
                         <input type="text" id="user-e-mail" name="user-e-mail" placeholder="email@example.com">
-                    </div>
+                    </p>
                 </div>
                 <label for="user-message">Текст письма:</label>
                 <textarea id="user-message" name="user-message" rows="8" placeholder="В свободной форме"></textarea>
@@ -336,7 +319,7 @@
       
         <section class="modal-map">
             <h2 class="visually-hidden vis-h">Как добраться</h2>
-            <a href="#"><img src="img/map-big.jpg" alt="Наш адрес г. Москва, ул. Строителей, 15"></a>
+            <a href="#"><img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес г. Москва, ул. Строителей, 15"></a>
             <button class="modal-close">Закрыть</button>
         </section>
     </body>
