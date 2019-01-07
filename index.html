@@ -7,43 +7,51 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header class="container">
-            <div class="main-header">
+        <div class="container">
+            <header class="main-header">
                 <div class="main-header-container">
                     <a class="main-header-logo">
-                      <img src="img/logo.svg" width="164" height="35" alt="Логотип">
+                        <img src="img/logo.svg" width="164" height="35" alt="Логотип">
                     </a>
                     <section class="user-interface">
-            <!--              временный класс vis-h-->
-                        <h2 class="visually-hidden vis-h">Интерфейс пользователя</h2>
-                        <form class="search" action="#" method="get">
-                            <p>
-                                <input class="test" type="search" name="search" placeholder="Поиск по сайту">
-                            </p>
-                            <button type="submit" class="search-button visually-hidden vis-h">Найти</button>
+                        <h2 class="visually-hidden">Интерфейс пользователя</h2>
+                        <form class="search" action="https://echo.htmlacademy.ru" method="get">
+                            <label for="search">поиск</label>
+                            <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+                            <button type="submit" class="search-button">Найти</button>
                         </form>
-                        <div class="wrapper">
-                            <ul class="user-login">
-                                <li><a class="user-icon" href="#">Профайл</a></li>
-                                <li><a class="user-name vis-h" href="#">Валентин Петухов</a></li>
-                                <li><a class="login-link" href="#">Войти</a></li>
-                                <li><a class="login-exit visually-hidden vis-h" href="#">Выход</a></li>
-                            </ul>
-                            <a class="compare" href="#">Сравнить</a>
-                            <a class="cart" href="#">Корзина</a>
-                        </div>
+                        <ul class="user-login">
+                            <li><a class="user-icon" href="#">Профайл</a></li>
+                            <li><a class="user-name" href="#">Валентин Петухов</a></li>
+                            <li><a class="login-link" href="#">Войти</a></li>
+                            <li><a class="login-exit" href="#">Выход</a></li>
+                        </ul>
+                        <a class="compare" href="#">Сравнить</a>
+                        <a class="cart" href="#">Корзина</a>
                     </section>
                     <nav class="main-navigation">
                         <ul class="site-navigation">
-                            <li>
-                                <a class="show-popular" href="catalog.html">Каталог товаров</a>
-                                <ul class="popular">
-                                    <li><a href="#">Виртуальная реальность</a></li>
-                                    <li><a href="#">Моноподы для селфи</a></li>
-                                    <li><a href="#">Экшн-камеры</a></li>
-                                    <li><a href="#">Фитнес-браслеты</a></li>
-                                    <li><a href="#">Умные часы</a></li>
-                                    <li><a href="#">Квадрокоптеры</a></li>
+                            <li class="catalog-menu">
+                                <a href="#">Каталог товаров</a>
+                                <ul class="popular  index-column">
+                                    <li class="column-1">
+                                        <ul>
+                                            <li><a href="#">Виртуальная реальность</a></li>
+                                            <li><a href="catalog.html">Моноподы для селфи</a></li>
+                                            <li><a href="#">Экшн-камеры</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="column-2">
+                                        <ul>
+                                            <li><a href="#">Фитнес-браслеты</a></li>
+                                            <li><a href="#">Умные часы</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="column-2">
+                                            <li><a href="#">Квадрокоптеры</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li><a href="#">Доставка</a></li>
@@ -52,20 +60,20 @@
                         </ul>
                     </nav>
                 </div>
-            </div>
-        </header>
+            </header>
+        </div>
       
         <main>
             <div class="container">
-                <h1 class="visually-hidden vis-h">Магазин "Device"</h1>
+                <h1 class="visually-hidden">Магазин "Device"</h1>
                 <section class="product-slider">
-                    <h2 class="visually-hidden vis-h">Предпросмотр</h2>
-                    <ul class="slider-controls">
-                        <li><button class="active">Первый слайд</button></li>
-                        <li><button>Второй слайд</button></li>
-                        <li><button>Третий слайд</button></li>
+                    <h2 class="visually-hidden">Предпросмотр</h2>
+                    <ul class="product-slider_controls">
+                        <li><button class="slide-1 active">Первый слайд</button></li>
+                        <li><button class="slide-2">Второй слайд</button></li>
+                        <li><button class="slide-3">Третий слайд</button></li>
                     </ul>
-                    <ul class="slider-slides">
+                    <ul class="product-slider_slides index-column">
                         <li>
                             <div class="wrapper-image">
                                 <img src="img/slider-1.png" width="384" height="486" alt="селфи-палка">
@@ -139,40 +147,38 @@
                 </section>
           
                 <section class="category">
-<!--              временный класс-->
-                    <h2 class="visually-hidden vis-h">Категории товара</h2>
-<!--              не допер как сделать лучше-->
+                    <h2 class="visually-hidden">Категории товара</h2>
                     <ul class="category-list">
-                        <li class="virt">
-                            <a href="#">Виртуальная реальность</a>
+                        <li>
+                            <a class="virt" href="#">Виртуальная реальность</a>
                         </li>
-                        <li class="monopod">
-                            <a href="#">Моноподы <br>для селфи</a>
+                        <li>
+                            <a class="monopod" href="catalog.html">Моноподы <br>для селфи</a>
                         </li>
-                        <li class="action-cam">
-                            <a href="#">Экшн-камеры</a>
+                        <li>
+                            <a class="action-cam" href="#">Экшн-камеры</a>
                         </li>
-                        <li class="fitnes-armlet">
-                            <a href="#">Фитнес-браслеты</a>
+                        <li>
+                            <a class="fitnes-armlet" href="#">Фитнес-браслеты</a>
                         </li>
-                        <li class="smart-watch">
-                            <a href="#">Умные часы</a>
+                        <li>
+                            <a class="smart-watch" href="#">Умные часы</a>
                         </li>
-                        <li class="quadcopt">
-                            <a href="#">Квадрокоптеры</a>
+                        <li>
+                            <a class="quadcopt" href="#">Квадрокоптеры</a>
                         </li>
                     </ul>
                 </section>
           
                 <section class="service-slider">
-                    <h2 class="visually-hidden vis-h">Сервис</h2>
-                    <ul class="slider-controls">
-                        <li><button class="button active">Доставка</button></li>
-                        <li><button class="button">Гарантия</button></li>
-                        <li><button class="button">Кредит</button></li>
+                    <h2 class="visually-hidden">Сервис</h2>
+                    <ul class="service-slider_controls">
+                        <li><button class="button button-delivery active">Доставка</button></li>
+                        <li><button class="button button-warranty">Гарантия</button></li>
+                        <li><button class="button button-credit">Кредит</button></li>
                     </ul>
                     <div class="slider-show">
-                        <ul class="slider-slides">
+                        <ul class="service-slider_slider-slides">
                             <li class="delivery">
                                 <div class="slide-content">
                                 <h3>Доставка</h3>
@@ -196,7 +202,7 @@
                 </section>
           
                 <section class="brands">
-                    <h2 class="visually-hidden vis-h">Бренды производителей</h2>
+                    <h2 class="visually-hidden">Бренды производителей</h2>
                     <ul class="brand-list">
                         <li>
                             <a href="#">
@@ -225,13 +231,13 @@
                     </ul>
                 </section>
           
-                <div class="index-column about/contacts">
+                <div class="index-column about_contacts">
                     <section class="about">
                         <h2>О нас</h2>
                         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
                         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
                         <ul class="shiping-company-list">
-                            <li>Деловые линии</li>
+                            <li>Деловые Линии</li>
                             <li>Автотрейдинг</li>
                             <li>ЖелДорЭкспедиция</li>
                         </ul>
@@ -252,22 +258,22 @@
         <footer class="main-footer">
             <div class="container">
                 <section class="user-interface">
-                    <h2 class="visually-hidden vis-h">Интерфейс пользователя</h2>
-                    <a class="footer-logo">
-                        <img src="img/logo-footer.svg" width="163" height="35" alt="лого DEVICE">
-                    </a>
-                    <div class="wrapper">
-                        <ul class="user-login">
-                            <li><a class="user-icon" href="#">Профайл</a></li>
-                            <li><a class="user-name vis-h" href="#">Валентин Петухов</a></li>
-                            <li><a href="#" class="login-link">Войти</a></li>
-                            <li><a class="login-exit vis-h">Выход</a></li>
-                        </ul>
-                        <a class="compare" href="#">Сравнить</a>
-                        <a class="cart" href="#">Корзина</a>
+                    <h2 class="visually-hidden">Интерфейс пользователя</h2>
+                    <div class="footer-logo-wrapper">
+                        <a class="footer-logo">
+                            <img src="img/logo-footer.svg" width="163" height="35" alt="лого DEVICE">
+                        </a>
                     </div>
+                    <ul class="user-login">
+                        <li><a class="user-icon yellow" href="#">Профайл</a></li>
+                        <li><a class="user-name" href="#">Валентин Петухов</a></li>
+                        <li><a class="login-link" href="#">Войти</a></li>
+                        <li><a class="login-exit" href="#">Выход</a></li>
+                    </ul>
+                    <a class="compare yellow" href="#">Сравнить</a>
+                    <a class="cart yellow" href="#">Корзина</a>
                 </section>
-                <div class="footer-wrapper">
+                <div class="footer-wrapper index-column">
                     <div class="footer-left">
                         <p class="adress">г. Москва, ул. Строителей, 15</p>
                     </div>
@@ -297,9 +303,9 @@
             </div>
         </footer>
       
-        <section class="modal-write-us">
-            <h2 class="visually-hidden vis-h">Напишите нам</h2>
-            <form action="#" method="post">
+        <section class="modal modal-write-us">
+            <h2 class="visually-hidden">Напишите нам</h2>
+            <form class="form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="index-column">
                     <p class="user-name">
                         <label for="user-name">Ваше имя:</label>
@@ -312,15 +318,19 @@
                 </div>
                 <label for="user-message">Текст письма:</label>
                 <textarea id="user-message" name="user-message" rows="8" placeholder="В свободной форме"></textarea>
-                <button class="button" type="submit">Отправить</button>
+                <button class="button button-send" type="submit">Отправить</button>
             </form>
             <button class="modal-close">Закрыть</button>
         </section>
       
-        <section class="modal-map">
-            <h2 class="visually-hidden vis-h">Как добраться</h2>
-            <a href="#"><img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес г. Москва, ул. Строителей, 15"></a>
+        <section class="modal modal-map">
+            <h2 class="visually-hidden">Как добраться</h2>
+            <iframe class="yandex-map" src="https://yandex.ru/map-widget/v1/213/moscow/?ll=37.600765%2C55.860352&mode=search&sll=37.600765%2C55.862090&sspn=0.157242%2C0.048849&text=%D0%9D%D0%B0%D1%88%20%D0%B0%D0%B4%D1%80%D0%B5%D1%81%20%D0%B3.%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9%2C%2015&z=13" width="960" height="559" frameborder="1" allowfullscreen="true"></iframe>
+            <p>
+                <img src="img/map-big.jpg" width="960" height="559" alt="Наш адрес г. Москва, ул. Строителей, 15">
+            </p>
             <button class="modal-close">Закрыть</button>
         </section>
+        <script src="js/script.js"></script>
     </body>
 </html>
