@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>HTML Academy: Девайс</title>
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.min.css">
     </head>
     <body class="inner-page">
         <div class="container">
@@ -13,7 +13,7 @@
                     <a href="index.html" class="main-header-logo">
                         <img src="img/logo.svg" width="164" height="35" alt="Логотип">
                     </a>
-                    <section class="user-interface">
+                    <section class="user-interface autorized">
                         <h2 class="visually-hidden">Интерфейс пользователя</h2>
                         <form class="search" action="#" method="get">
                             <label for="search">поиск</label>
@@ -21,8 +21,8 @@
                             <button type="submit" class="search-button">Найти</button>
                         </form>
                         <ul class="user-login">
-                            <li><a class="user-icon" href="#">Профайл</a></li>
-                            <li><a class="user-name" href="#">Валентин Петухов</a></li>
+                            <li><a class="user-icon" href="user.profile.html">Профайл</a></li>
+                            <li><a class="user-name" href="user.profile.html">Валентин Петухов</a></li>
                             <li><a class="login-link" href="#">Войти</a></li>
                             <li><a class="login-exit" href="#">Выход</a></li>
                         </ul>
@@ -72,12 +72,11 @@
                     <li>Моноподы для селфи</li>
                 </ul>
             </div>
-          
-            <div class="index-column-catalog">
+            <div class="catalog-wrapper">
+            
+            <div class="index-column container">
                 <section class="filter">
-                    <div class="caption-wrapper">
-                        <h2>Фильтр:</h2>
-                    </div>
+                    <h2>Фильтр:</h2>
                     <form action="https://echo.htmlacademy.ru" method="get">
                         <fieldset class="filter-item filter-item-price">
                             <legend class="price">Стоимость</legend>
@@ -155,15 +154,15 @@
                     
                     <section class="catalog">
                         <h2 class="visually-hidden vis-h">Список товаров</h2>
-                        <div class="catalog-wrapper">
+                        <div class="cards-wrapper">
                             <ul class="catalog-list">
                                 <li class="catalog-item">
                                     <div class="picture-container">
                                         <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                                     </div>
                                     <div class="actions">
-                                        <button class="button add-to-cart">В корзину</button>
-                                        <button class="add-to-compare">Добавить к сравнению</button>
+                                        <a href="#" class="button add-to-cart">В корзину</a>
+                                        <a href="#" class="add-to-compare">Добавить к сравнению</a>
                                     </div>
                                     <p class="label-new">New</p>
                                     <div class="index-column">
@@ -176,8 +175,8 @@
                                         <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                                     </div>
                                     <div class="actions">
-                                        <button class="button add-to-cart">В корзину</button>
-                                        <button class="add-to-compare">Добавить к сравнению</button>
+                                        <a href="#" class="button add-to-cart">В корзину</a>
+                                        <a href="#" class="add-to-compare">Добавить к сравнению</a>
                                     </div>
                                     <p class="label-new">New</p>
                                     <div class="index-column">
@@ -190,8 +189,8 @@
                                         <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                                     </div>
                                     <div class="actions">
-                                        <button class="button add-to-cart">B корзину</button>
-                                        <button class="add-to-compare">Добавить к сравнению</button>
+                                        <a href="#" class="button add-to-cart">B корзину</a>
+                                        <a href="#" class="add-to-compare">Добавить к сравнению</a>
                                     </div>
                                     <p class="label-new">New</p>
                                     <div class="index-column">
@@ -204,8 +203,8 @@
                                         <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                                     </div>
                                     <div class="actions">
-                                        <button class="button add-to-cart">В корзину</button>
-                                        <button class="add-to-compare">Добавить к сравнению</button>
+                                        <a href="#" class="button add-to-cart">В корзину</a>
+                                        <a href="#" class="add-to-compare">Добавить к сравнению</a>
                                     </div>
                                     <p class="label-new">New</p>
                                     <div class="index-column">
@@ -229,6 +228,7 @@
                     </section>
                 </div>
             </div>
+            </div>
         </main>
       
         <footer class="main-footer">
@@ -240,9 +240,9 @@
                             <img src="img/logo-footer.svg" width="163" height="35" alt="лого DEVICE">
                         </a>
                     </div>
-                    <ul class="user-login">
-                        <li><a class="user-icon yellow" href="#">Профайл</a></li>
-                        <li><a class="user-name" href="#">Валентин Петухов</a></li>
+                    <ul class="user-login autorized">
+                        <li><a class="user-icon yellow" href="user.profile.html">Профайл</a></li>
+                        <li><a class="user-name" href="user.profile.html">Валентин Петухов</a></li>
                         <li><a class="login-link" href="#">Войти</a></li>
                         <li><a class="login-exit" href="#">Выход</a></li>
                     </ul>
