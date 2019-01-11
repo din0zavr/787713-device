@@ -336,7 +336,9 @@ input[type="radio"].visually-hidden {
     display: none;
 }
 
-.main-header .login-exit {
+.main-header .login-exit[href],
+.main-header .login-exit[href]:hover,
+.main-header .login-exit[href]:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -787,7 +789,8 @@ section.category {
 /*-------------------service-slider---------*/
 
 
-.service-slider {
+.service-slider-container {
+    
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -797,6 +800,26 @@ section.category {
     
     min-height: 320px;
     margin-bottom: 162px;
+}
+
+.service-slider {
+    position: relative;
+}
+
+.service-slider::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    
+    width: 100%;
+    height: calc(100% - 35px);
+    -webkit-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+            transform: translateY(100px);
+    
+    background-color: #e5e5e5;
+    
 }
 
 .service-slider ul {
@@ -855,8 +878,6 @@ section.category {
     overflow: hidden;
 }
 
-
-
 .service-slider_slider-slides {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -886,6 +907,7 @@ section.category {
 .service-slider .slide-content {
     width: 440px;
     margin-left: 40px;
+    
 }
 
 .delivery::before {
@@ -1080,12 +1102,12 @@ section.category {
     padding: 0;
 }
 
-.main-footer a[href]:hover,
-.main-footer a[href]:focus {
+.main-footer a[href]:not(.login-exit):hover,
+.main-footer a[href]:not(.login-exit):focus {
     opacity: 0.6;
 }
 
-.main-footer a[href]:active {
+.main-footer a[href]:not(.login-exit):active {
     opacity: 0.3;
 }
 
@@ -1238,7 +1260,7 @@ section.category {
     opacity: 0.3;
 }
 
-.social-list a[href]:active {
+.social-list a[href]:not(.login-exit):active {
     opacity: 0.1;
 }
 
@@ -1485,10 +1507,12 @@ section.category {
 .catalog-wrapper {
     position: relative;
 }
+
 .catalog-wrapper::after {
     content: "";
     position: absolute;
     top: 0;
+    z-index: -10;
     
     width: 100%;
     height: 70px;
@@ -1502,6 +1526,7 @@ section.category {
     position: absolute;
     top: 0;
     right: calc(50% + 252px);
+    z-index: -10;
     
     width:100%;
     height:100%;
